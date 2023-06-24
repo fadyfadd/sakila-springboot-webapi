@@ -5,6 +5,8 @@ import java.util.*;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -39,6 +41,7 @@ public class Actor {
 	
 	@Id
 	@Column(name="actor_id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	Integer actorId;
 	@Column(name="first_name")
 	String firstName;

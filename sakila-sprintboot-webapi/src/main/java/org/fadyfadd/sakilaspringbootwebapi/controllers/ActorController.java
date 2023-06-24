@@ -1,6 +1,5 @@
 package org.fadyfadd.sakilaspringbootwebapi.controllers;
 
-import java.io.ObjectInputFilter.Config;
 import java.util.List;
 
 import org.fadyfadd.sakilaspringbootwebapi.EmailConfiguration;
@@ -17,8 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ActorController {
 
 	@Autowired
-	EmailConfiguration configuration;
-	
+	EmailConfiguration configuration;	
 	
 	@Autowired
 	ActorService actorService;
