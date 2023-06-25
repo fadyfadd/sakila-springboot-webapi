@@ -21,7 +21,7 @@ public class ActorController {
 	EmailConfiguration configuration;	
 	
 	@Autowired
-	@Qualifier("todosJdbcTemplate")
+	@Qualifier("sakilaJdbcTemplate")
 	JdbcTemplate jdbcTemplate;
 	
 	@Autowired

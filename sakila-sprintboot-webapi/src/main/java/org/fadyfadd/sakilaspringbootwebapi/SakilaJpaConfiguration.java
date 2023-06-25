@@ -22,43 +22,43 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableJpaRepositories(
   basePackageClasses = Actor.class,
-  entityManagerFactoryRef = "todosEntityManagerFactory",
-  transactionManagerRef = "todosTransactionManager"
+  entityManagerFactoryRef = "sakilaEntityManagerFactory",
+  transactionManagerRef = "sakilaTransactionManager"
 )
-public class TodoJpaConfiguration {
+public class SakilaJpaConfiguration {
 	
 	@Bean
 	@ConfigurationProperties("spring.datasource.hikari")
-	public DataSource todosDataSource() {
-	    return todosDataSourceProperties()
+	public DataSource sakilaDataSource() {
+	    return sakilaDataSourceProperties()
 	      .initializeDataSourceBuilder()
 	      .build();
 	}
     @Bean
     @ConfigurationProperties("spring.datasource")
-    public DataSourceProperties todosDataSourceProperties() {
+    public DataSourceProperties sakilaDataSourceProperties() {
         return new DataSourceProperties();
     }
     
     @Bean
-    public JdbcTemplate todosJdbcTemplate(@Qualifier("todosDataSource") DataSource dataSource) {
+    public JdbcTemplate sakilaJdbcTemplate(@Qualifier("sakilaDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
     
     @Bean
-    public LocalContainerEntityManagerFactoryBean todosEntityManagerFactory(
-      @Qualifier("todosDataSource") DataSource dataSource,
+    public LocalContainerEntityManagerFactoryBean sakilaEntityManagerFactory(
+      @Qualifier("sakilaDataSource") DataSource dataSource,
       EntityManagerFactoryBuilder builder) {
         return builder
-          .dataSource(todosDataSource())
+          .dataSource(sakilaDataSource())
           .packages("org.fadyfadd.sakilaspringbootwebapi.sakila")
           .build();
     }
 
     @Bean
-    public PlatformTransactionManager todosTransactionManager(
-      @Qualifier("todosEntityManagerFactory") LocalContainerEntityManagerFactoryBean todosEntityManagerFactory) {
-        return new JpaTransactionManager(Objects.requireNonNull(todosEntityManagerFactory.getObject()));
+    public PlatformTransactionManager sakilaTransactionManager(
+      @Qualifier("sakilaEntityManagerFactory") LocalContainerEntityManagerFactoryBean sakilaEntityManagerFactory) {
+        return new JpaTransactionManager(Objects.requireNonNull(sakilaEntityManagerFactory.getObject()));
     }	 
 
 }
