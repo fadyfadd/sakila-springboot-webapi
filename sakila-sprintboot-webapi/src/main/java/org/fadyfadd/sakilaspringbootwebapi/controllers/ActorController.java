@@ -3,7 +3,7 @@ package org.fadyfadd.sakilaspringbootwebapi.controllers;
 import java.util.List;
 
 import org.fadyfadd.sakilaspringbootwebapi.EmailConfiguration;
-import org.fadyfadd.sakilaspringbootwebapi.repositories.Actor;
+import org.fadyfadd.sakilaspringbootwebapi.sakila.Actor;
 import org.fadyfadd.sakilaspringbootwebapi.services.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package org.fadyfadd.sakilaspringbootwebapi.repositories;
+package org.fadyfadd.sakilaspringbootwebapi.sakila;
 
 
 import java.util.*;

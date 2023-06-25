@@ -2,8 +2,8 @@ package org.fadyfadd.sakilaspringbootwebapi.services;
 
 import java.util.List;
 
-import org.fadyfadd.sakilaspringbootwebapi.repositories.Actor;
-import org.fadyfadd.sakilaspringbootwebapi.repositories.ActorRepository;
+import org.fadyfadd.sakilaspringbootwebapi.sakila.Actor;
+import org.fadyfadd.sakilaspringbootwebapi.sakila.ActorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
