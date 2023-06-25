@@ -28,14 +28,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class SakilaJpaConfiguration {
 	
 	@Bean
-	@ConfigurationProperties("spring.datasource.hikari")
+	@ConfigurationProperties("spring.sakila.datasource.hikari")
 	public DataSource sakilaDataSource() {
 	    return sakilaDataSourceProperties()
 	      .initializeDataSourceBuilder()
 	      .build();
 	}
     @Bean
-    @ConfigurationProperties("spring.datasource")
+    @ConfigurationProperties("spring.sakila.datasource")
     public DataSourceProperties sakilaDataSourceProperties() {
         return new DataSourceProperties();
     }
