@@ -1,6 +1,5 @@
 package org.fadyfadd.sakilaspringbootwebapi;
 
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

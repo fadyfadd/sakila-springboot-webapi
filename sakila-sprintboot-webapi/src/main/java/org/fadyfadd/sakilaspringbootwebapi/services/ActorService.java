@@ -13,10 +13,6 @@ public class ActorService {
 	@Autowired
 	ActorRepository actorRepository;
 
-	public ActorService() {
-
-	}
-
 	public List<Actor> getAllActors() {
 		return actorRepository.findAll();
 	}
